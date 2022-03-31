@@ -1,8 +1,8 @@
-if (typeof(Storage) !== "undefined") {
-  // Browser mendukung sessionStorage/localStorage.
-} else {
-  // Browser tidak mendukung sessionStorage/LocalStorage
-}
+// if (typeof(Storage) !== "undefined") {
+//   // Browser mendukung sessionStorage/localStorage.
+// } else {
+//   // Browser tidak mendukung sessionStorage/LocalStorage
+// }
 
 const numbers = document.querySelectorAll(".number")
 
@@ -44,6 +44,10 @@ const inputDecimal = (dot) => {
   }
   currentNumber += dot
 }
+
+// const inputPercentage = (prevNumber, currentNumber) => {
+//   return (prevNumber/100)*currentNumber;
+// }
 
 number.forEach((number) => {
   number.addEventListener("click", (event) => {
@@ -116,5 +120,11 @@ const decimal = document.querySelector('.decimal')
 decimal.addEventListener('click', (event) => {
   inputDecimal(event.target.value)
   updateScreen(currentNumber)
+})
+
+const percentage = document.querySelector('.percentage')
+
+percentage.addEventListener('click', (event) => {
+  alert("Be patient! This operation will ready coming soon.")
 })
 
